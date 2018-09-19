@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-title>MATERIAL REQUIREMENTS</mat-card-title>
+
+  <mat-list
+    
+  >
+    <mat-list-item
+      *ngFor = 'let Material of MoonMaterialList'
+    >{{Material.TypeName}}: {{Material.Quantity}}</mat-list-item>
+  </mat-list>
+
+</mat-card>

@@ -1,0 +1,29 @@
+<mat-accordion>
+  <mat-expansion-panel
+    *ngFor = 'let key of ReactionGroupNames'
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{key}}
+      </mat-panel-title>      
+    </mat-expansion-panel-header>
+
+    <mat-form-field
+      appearance = 'fill'
+      *ngFor = 'let TypeName of ReactionGroups_FromData[key]'
+      fxLayout = 'column'
+    >
+      <mat-label>{{TypeName}}</mat-label>
+      <input
+        matInput
+        type = 'number'
+        autocomplete = 'off'
+        placeholder = 'Formula Runs'
+        #currentInput
+        (focusout) = 'SetType_OnUsersList(TypeName, currentInput.value)'
+      >
+    </mat-form-field>
+    
+  </mat-expansion-panel>
+
+</mat-accordion>

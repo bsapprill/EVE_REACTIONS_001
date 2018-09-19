@@ -1,0 +1,18 @@
+<mat-card>
+
+  <mat-card-title>REACTION RESULTS</mat-card-title>
+
+  <mat-card-content>
+
+    <mat-list>
+
+      <mat-list-item
+        *ngFor = 'let Type of UsersReactionOutputs'
+        
+      >{{Type.TypeName}}: {{Type.Quantity}}</mat-list-item>
+
+    </mat-list>
+
+  </mat-card-content>
+
+</mat-card>
